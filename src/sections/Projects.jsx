@@ -37,6 +37,31 @@ const Projects = () => {
         </svg>
       ),
       color: "from-blue-500 to-cyan-700"
+    },
+    {
+      id: 4,
+      title: "Web-Based Accommodation Location System",
+      subtitle: "GIS-Enabled Housing Finder",
+      description: "A web application that leverages GIS and mapping APIs to help users locate available accommodation options based on proximity, amenities, and user preferences.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
+        </svg>
+      ),
+      color: "from-fuchsia-500 to-pink-600"
+    },
+    {
+      id: 5,
+      title: "Web-Based Land Sale Management System",
+      subtitle: "Digital Land Transactions Platform",
+      description: "A platform for listing, searching, and managing land sales, integrating mapping tools for visualization and secure transaction management.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <rect x="3" y="7" width="18" height="13" rx="2" strokeWidth={1.5} stroke="currentColor" fill="none"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7V5a5 5 0 0110 0v2" />
+        </svg>
+      ),
+      color: "from-yellow-500 to-orange-700"
     }
   ];
 
