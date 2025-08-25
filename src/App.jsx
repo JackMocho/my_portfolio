@@ -1,21 +1,20 @@
 // src/App.jsx
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { Navbar, Home, About, Projects, Services, Contact, Footer } from './sections';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="relative">
-        <Navbar />
-        <Home />
-        <About />
-        <Projects />
-        <Services />
-        <Contact />
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <div className="relative">
+      <Navbar />
+      <main>
+        <section id="home"><Home /></section>
+        <section id="about"><About /></section>
+        <section id="projects"><Projects /></section>
+        <section id="services"><Services /></section>
+        <section id="contact"><Contact /></section>
+      </main>
+      <Footer />
+    </div>
   );
 };
 

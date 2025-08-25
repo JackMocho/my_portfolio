@@ -1,14 +1,20 @@
 // src/components/Navbar.jsx
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 
 const navItems = [
-  { label: 'Home', target: 'home' },
-  { label: 'About', target: 'about' },
-  { label: 'Projects', target: 'projects' },
-  { label: 'Services', target: 'services' },
-  { label: 'Contact', target: 'contact' },
+  { label: 'Home', to: 'home' },
+  { label: 'About', to: 'about' },
+  { label: 'Projects', to: 'projects' },
+  { label: 'Services', to: 'services' },
+  { label: 'Contact', to: 'contact' },
 ];
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
 const Navbar = () => {
   return (
@@ -17,18 +23,14 @@ const Navbar = () => {
         <div className="text-white font-bold text-xl">J.K.M</div>
         <div className="flex space-x-6">
           {navItems.map((item) => (
-            <ScrollLink
-              key={item.target}
-              to={item.target}
-              spy={true}
-              smooth={true}
-              offset={-70} // Adjust for navbar height
-              duration={500}
-              activeClass="text-cyan-400 border-b-2 border-cyan-400"
-              className="text-gray-300 hover:text-white px-2 py-1 cursor-pointer transition-all duration-200"
+            <button
+              key={item.to}
+              onClick={() => scrollToSection(item.to)}
+              className="text-gray-300 hover:text-white px-2 py-1 cursor-pointer transition-all duration-200 bg-transparent border-none outline-none"
+              style={{ background: 'none' }}
             >
               {item.label}
-            </ScrollLink>
+            </button>
           ))}
         </div>
       </div>
