@@ -11,7 +11,7 @@ const About = () => {
             {/* Placeholder for an image */}
             <div className="bg-gray-200 w-full h-80  rounded-xl shadow-lg flex items-center justify-center text-gray-500 text-lg">
               <img
-                src="./profile-image.jpg" // Replace with your profile image URL
+                src="./profile-image.jpg"
                 alt="Profile"
               
               />
